@@ -1,0 +1,16 @@
+name: Suite
+parallel: tests
+configFailurePolicy: skip
+tests:
+  - name: Test1
+  parallel: tests
+  parameters: { browsername: edge }
+  classes:
+    - CrossExecutioninTestng.TestNGCrossParallel
+
+  - name: Test2
+  parallel: tests
+  parameters: { browsername: Chrome }
+  classes:
+    - CrossExecutioninTestng.TestNGCrossParallel
+
